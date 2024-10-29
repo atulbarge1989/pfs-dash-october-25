@@ -1,0 +1,17 @@
+---
+build:
+  image: "kdpr01.kpit.com/kat-auto-merge-req"
+  stage: "Build"
+  tags: "- docker"
+mergeRequest:
+  image: "kdpr01.kpit.com/kat-auto-merge-req"
+  stage: "Merge Request"
+  tags: "- docker"
+deploy:
+  image: "kdpr01.kpit.com/kat-auto-merge-req"
+  stage: "Deploy"
+  tags: "- docker"
+stages:
+- "Build"
+- "Merge Request"
+- "Deploy"
