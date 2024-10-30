@@ -9,3 +9,35 @@ Implementation the rules to authenticate the Mobis user on Global server & Domes
 Implement project YAML file generation
 Feature inhencement - project create/edit screen connect to LDAP account
 Implementation of LDAP Configuration Screen UI
+
+
+User shall be authenticate with MOBIS domestic & global server based on some rules/conditions.
+
+2) Testing shall be done for verify the authentication.
+
+ 
+
+Function Category:[WP5-T-03] Develop enterprise dashboard
+Story Points:5
+Epic Link:Extra Features Development
+Sprint:EUA Sprint 010
+Description
+As per mobis email need to apply the below rules to select the LDAP server.
+
+below are the rules/conditions which mobis has provides to select the LDAP server.
+
+ If ( employee_ID.startswith(“1”) OR employee_id.startswith(“DT”) ):  // 1624393 , 1652584, 1595488, DT0184457, DT0124545
+
+           Authenticate to  domestic server(employee_id)
+
+else:                             
+
+           Authenticate to global server(employee_id)  // 6018741, 6574154, 3815484, 5496481, GT0012145
+
+ 
+
+If some employees are dispatched from Korea to foreign R&D center, their accounts must be authenticated on the global server.
+
+ 
+
+ 
